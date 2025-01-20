@@ -5,7 +5,6 @@ interface Skill {
   items: {
     name: string;
     level: number; // 0 à 100
-    icon?: string;
   }[];
 }
 
@@ -13,36 +12,53 @@ const skills: Skill[] = [
   {
     category: "Front-end",
     items: [
-      { name: "React", level: 90 },
-      { name: "TypeScript", level: 85 },
-      { name: "HTML/CSS", level: 95 },
-      { name: "Tailwind CSS", level: 88 },
+      { name: "Angular", level: 85 },
+      { name: "JavaScript", level: 85 },
+      { name: "HTML/CSS", level: 90 },
+      { name: "TailwindCSS", level: 85 },
     ],
   },
   {
     category: "Back-end",
     items: [
-      { name: "Node.js", level: 80 },
-      { name: "Express", level: 75 },
-      { name: "SQL", level: 70 },
-      { name: "MongoDB", level: 65 },
+      { name: "Symfony", level: 80 },
+      { name: "Laravel", level: 80 },
+      { name: "PHP", level: 85 },
+      { name: "Java", level: 75 },
     ],
   },
   {
-    category: "Outils",
+    category: "Autres Technologies",
     items: [
-      { name: "Git", level: 85 },
-      { name: "VS Code", level: 90 },
-      { name: "Webpack", level: 70 },
-      { name: "Docker", level: 60 },
+      { name: "Python", level: 80 },
+      { name: "C/C++", level: 75 },
+      { name: "SQL", level: 85 },
+      { name: "MongoDB", level: 75 },
+    ],
+  },
+  {
+    category: "Soft Skills",
+    items: [
+      { name: "Résolution de problèmes", level: 90 },
+      { name: "Veille technologique", level: 85 },
+      { name: "Documentation technique", level: 80 },
+      { name: "Méthodes agiles", level: 75 },
+    ],
+  },
+  {
+    category: "Langues",
+    items: [
+      { name: "Français", level: 100 },
+      { name: "Anglais (Compréhension)", level: 85 },
+      { name: "Anglais (Expression)", level: 70 },
     ],
   },
 ];
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="skills" className="py-20 bg-background">
+      <div className="container-section">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -50,12 +66,12 @@ const Skills = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-4">
+          <h2 className="text-3xl font-bold text-text sm:text-4xl mb-4">
             Mes Compétences
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Un aperçu de mes compétences techniques et de mon expertise.
+          <p className="text-xl text-accent max-w-2xl mx-auto">
+            Un aperçu de mes compétences techniques et non techniques
           </p>
         </motion.div>
 
@@ -67,19 +83,19 @@ const Skills = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
-              className="bg-gray-50 rounded-xl p-6 shadow-lg"
+              className="bg-background rounded-xl p-6 shadow-lg"
             >
-              <h3 className="text-xl font-semibold text-gray-900 mb-6">
+              <h3 className="text-xl font-semibold text-text mb-6">
                 {skillCategory.category}
               </h3>
               <div className="space-y-4">
                 {skillCategory.items.map((skill, skillIndex) => (
                   <div key={skillIndex} className="space-y-2">
                     <div className="flex justify-between items-center">
-                      <span className="text-gray-700">{skill.name}</span>
-                      <span className="text-gray-500">{skill.level}%</span>
+                      <span className="text-accent">{skill.name}</span>
+                      <span className="text-secondary">{skill.level}%</span>
                     </div>
-                    <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
+                    <div className="h-2 bg-secondary rounded-full overflow-hidden">
                       <motion.div
                         initial={{ width: 0 }}
                         whileInView={{ width: `${skill.level}%` }}

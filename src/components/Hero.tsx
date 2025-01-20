@@ -2,38 +2,50 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-8">
-            Bonjour, je suis <span className="text-primary">Votre Nom</span>
-          </h1>
-          <p className="text-xl sm:text-2xl text-gray-600 mb-12">
-            Développeur Web Passionné
-          </p>
-          <div className="flex justify-center space-x-4">
-            <motion.a
-              href="#contact"
-              className="bg-primary text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Me contacter
-            </motion.a>
-            <motion.a
-              href="#projects"
-              className="bg-white text-primary px-8 py-3 rounded-lg font-medium border-2 border-primary hover:bg-gray-50 transition-colors"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Voir mes projets
-            </motion.a>
-          </div>
-        </motion.div>
+    <section className="min-h-screen flex items-center justify-center py-20 bg-background">
+      <div className="container-section">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center lg:text-left"
+          >
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-text mb-6">
+              Alexis Dumolie
+            </h1>
+            <p className="text-xl sm:text-2xl text-accent mb-8">
+              Développeur Full Stack Passionné
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
+              <motion.a
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                href="#projects"
+                className="btn-primary px-8 py-3 rounded-full text-lg font-medium"
+              >
+                Voir mes projets
+              </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                href="#contact"
+                className="px-8 py-3 rounded-full text-lg font-medium border-2 border-primary text-primary hover:bg-primary hover:text-background transition-colors"
+              >
+                Me contacter
+              </motion.a>
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="hidden lg:block"
+          >
+            {/* Placeholder pour une illustration ou image */}
+            <div className="aspect-square rounded-full bg-primary-light"></div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

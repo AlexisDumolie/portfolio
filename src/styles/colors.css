@@ -1,0 +1,12 @@
+:root {
+  --color-background: #EEF0F2;
+  --color-secondary: #C6C7C4;
+  --color-accent: #A2999E;
+  --color-primary: #846A6A;
+  --color-text: #353B3C;
+  
+  /* Variantes avec transparence */
+  --color-primary-light: rgba(132, 106, 106, 0.1);
+  --color-primary-hover: rgba(132, 106, 106, 0.9);
+  --color-background-light: rgba(238, 240, 242, 0.8);
+}
