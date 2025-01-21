@@ -1,0 +1,26 @@
+{
+  "projects": [
+    {
+      "title": "CodeQuest",
+      "description": "Application innovante dédiée à l'apprentissage du code. Une approche interactive et engageante pour maîtriser la programmation.",
+      "image": "/src/assets/projects/codequest.png",
+      "technologies": ["React", "TypeScript", "Node.js"],
+      "githubLink": "https://github.com/CodeQuestApp/main"
+    },
+    {
+      "title": "ecoFloc4Win",
+      "description": "Fork du projet ecoFloc adapté pour Windows. Une solution écologique optimisée pour l'environnement Windows.",
+      "image": "/src/assets/projects/ecofloc4win.png",
+      "technologies": ["C++", "Windows API"],
+      "githubLink": "https://github.com/Mattis40/ecofloc4win"
+    },
+    {
+      "title": "Portfolio Personnel",
+      "description": "Site web personnel présentant mes projets et compétences, créé avec des technologies modernes.",
+      "image": "/src/assets/projects/portfolio.png",
+      "technologies": ["React", "TypeScript", "Tailwind CSS"],
+      "githubLink": "https://github.com/AlexisDumolie/portfolio",
+      "demoLink": "https://alexisdumolie.github.io/portfolio/"
+    }
+  ]
+}
