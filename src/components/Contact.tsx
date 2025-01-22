@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState, FormEvent } from 'react';
+import { BsTelephone } from 'react-icons/bs';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -61,7 +62,7 @@ const Contact = () => {
                       d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                     />
                   </svg>
-                  <span>dumoliealexis@gmail.com</span>
+                  <a href="mailto:dumoliealexis@gmail.com" className="contact-link">dumoliealexis@gmail.com</a>
                 </div>
                 <div className="flex items-center space-x-4 text-accent">
                   <svg
@@ -84,6 +85,10 @@ const Contact = () => {
                     />
                   </svg>
                   <span>Bayonne, 64100</span>
+                </div>
+                <div className="flex items-center space-x-4 text-accent">
+                  <BsTelephone className="w-6 h-6 text-primary" />
+                  <a href="tel:0767200756" className="contact-link">07-67-20-07-56</a>
                 </div>
               </div>
             </div>

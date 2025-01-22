@@ -40,6 +40,13 @@ a:hover {
   color: var(--color-background);
 }
 
+.contact-link {
+  color: var(--color-text);
+}
+.contact-link:hover {
+  color: var(--color-accent);
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;

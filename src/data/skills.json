@@ -1,0 +1,49 @@
+{
+  "skills": [
+    {
+      "category": "Front-end",
+      "items": [
+        { "name": "Angular", "icon": "SiAngular" },
+        { "name": "TailwindCSS", "icon": "SiTailwindcss" },
+        { "name": "React", "icon": "SiReact" },
+        { "name": "HTML/CSS", "icon": "SiHtml5" },
+        { "name": "TypeScript", "icon": "SiTypescript" },
+        { "name": "JavaScript", "icon": "SiJavascript" }
+      ]
+    },
+    {
+      "category": "Back-end",
+      "items": [
+        { "name": "PHP", "icon": "SiPhp" },
+        { "name": "Java", "icon": "SiJava" },
+        { "name": "Symfony", "icon": "SiSymfony" },
+        { "name": "Laravel", "icon": "SiLaravel" }
+      ]
+    },
+    {
+      "category": "Autres Technologies",
+      "items": [
+        { "name": "SQL", "icon": "SiMysql" },
+        { "name": "Python", "icon": "SiPython" },
+        { "name": "C/C++", "icon": "SiCplusplus" },
+        { "name": "MongoDB", "icon": "SiMongodb" }
+      ]
+    },
+    {
+      "category": "Soft Skills",
+      "items": [
+        { "name": "Résolution de problèmes", "icon": "BsBraces" },
+        { "name": "Veille technologique", "icon": "BsLightbulb" },
+        { "name": "Documentation technique", "icon": "BsFileText" },
+        { "name": "Méthodes agiles", "icon": "BsKanban" }
+      ]
+    },
+    {
+      "category": "Langues",
+      "items": [
+        { "name": "Français", "icon": "BsGlobe" },
+        { "name": "Anglais", "icon": "BsGlobe2" }
+      ]
+    }
+  ]
+}

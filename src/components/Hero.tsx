@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import photoProfil from '../assets/projects/photoDeProfil.jpg';
 
 const Hero = () => {
   return (
@@ -42,8 +43,11 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
             className="hidden lg:block"
           >
-            {/* Placeholder pour une illustration ou image */}
-            <div className="aspect-square rounded-full bg-primary-light"></div>
+            <img 
+              src={photoProfil} 
+              alt="Alexis Dumolie" 
+              className="w-full h-full object-cover rounded-full"
+            />
           </motion.div>
         </div>
       </div>
