@@ -1,6 +1,6 @@
 # 👋 Bienvenue sur mon Portfolio !
 
-Salut ! Je suis un jeune développeur de 21 ans passionné par la création d'applications web modernes et intuitives. Ce portfolio a été créé avec ❤️ pour présenter mes projets et compétences.
+Salut ! Je suis un jeune développeur de 20 ans passionné par l'informatique 💻.
 
 ## 🚀 Technologies utilisées
 
