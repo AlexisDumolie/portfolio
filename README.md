@@ -15,7 +15,7 @@ Si tu veux faire tourner ce projet en local :
 
 1. Clone le repo
 ```bash
-git clone [ton-lien-github]
+git clone https://github.com/AlexisDumolie/portfolio.git
 ```
 
 2. Installe les dépendances
