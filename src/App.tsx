@@ -4,6 +4,7 @@ import About from './components/About'
 import Projects from './components/Projects'
 import Skills from './components/Skills'
 import Contact from './components/Contact'
+import Footer from './components/Footer'
 import useKonamiCode from './hooks/useKonamiCode'
 import './styles/RetroMode.css'
 
@@ -20,6 +21,7 @@ function App() {
         <Skills />
         <Contact />
       </main>
+      <Footer />
     </div>
   )
 }

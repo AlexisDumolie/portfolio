@@ -1,19 +1,59 @@
 import { motion } from 'framer-motion';
-import { useState, FormEvent } from 'react';
+import { useState, FormEvent, useRef } from 'react';
 import { BsTelephone } from 'react-icons/bs';
+import emailjs from '@emailjs/browser';
+import { EMAILJS_CONFIG } from '../config/emailjs';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
+    from_name: '',
+    reply_to: '',
     message: ''
   });
 
-  const handleSubmit = (e: FormEvent) => {
+  const [status, setStatus] = useState<{
+    type: 'success' | 'error' | null;
+    message: string;
+  }>({
+    type: null,
+    message: ''
+  });
+
+  const form = useRef<HTMLFormElement>(null);
+
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    // Ici vous pouvez ajouter la logique pour envoyer l'email
-    console.log('Form submitted:', formData);
-    window.location.href = `mailto:dumoliealexis@gmail.com?subject=Contact depuis le portfolio&body=${formData.message}`;
+    
+    if (!form.current) return;
+
+    try {
+      setStatus({ type: null, message: '' });
+      
+      await emailjs.sendForm(
+        EMAILJS_CONFIG.SERVICE_ID,
+        EMAILJS_CONFIG.TEMPLATE_ID,
+        form.current,
+        EMAILJS_CONFIG.PUBLIC_KEY
+      );
+
+      setStatus({
+        type: 'success',
+        message: 'Message envoyé avec succès !'
+      });
+
+      // Réinitialiser le formulaire
+      setFormData({
+        from_name: '',
+        reply_to: '',
+        message: ''
+      });
+    } catch (error) {
+      setStatus({
+        type: 'error',
+        message: 'Une erreur est survenue lors de l\'envoi du message.'
+      });
+      console.error('EmailJS Error:', error);
+    }
   };
 
   return (
@@ -112,7 +152,6 @@ const Contact = () => {
                     />
                   </svg>
                 </a>
-                {/* Les autres réseaux sociaux seront ajoutés plus tard */}
               </div>
             </div>
           </motion.div>
@@ -123,29 +162,31 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form ref={form} onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-text">
+                <label htmlFor="from_name" className="block text-sm font-medium text-text">
                   Nom
                 </label>
                 <input
                   type="text"
-                  id="name"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  id="from_name"
+                  name="from_name"
+                  value={formData.from_name}
+                  onChange={(e) => setFormData({ ...formData, from_name: e.target.value })}
                   className="mt-1 block w-full rounded-md border-secondary shadow-sm focus:border-primary focus:ring-primary bg-background text-text"
                   required
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-text">
+                <label htmlFor="reply_to" className="block text-sm font-medium text-text">
                   Email
                 </label>
                 <input
                   type="email"
-                  id="email"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  id="reply_to"
+                  name="reply_to"
+                  value={formData.reply_to}
+                  onChange={(e) => setFormData({ ...formData, reply_to: e.target.value })}
                   className="mt-1 block w-full rounded-md border-secondary shadow-sm focus:border-primary focus:ring-primary bg-background text-text"
                   required
                 />
@@ -156,6 +197,7 @@ const Contact = () => {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
                   rows={4}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -163,6 +205,17 @@ const Contact = () => {
                   required
                 />
               </div>
+              
+              {status.type && (
+                <div
+                  className={`p-4 rounded-md ${
+                    status.type === 'success' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'
+                  }`}
+                >
+                  {status.message}
+                </div>
+              )}
+              
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
