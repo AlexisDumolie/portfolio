@@ -16,7 +16,7 @@ const Hero = () => {
               Alexis Dumolie
             </h1>
             <p className="text-xl sm:text-2xl text-accent mb-8">
-              Développeur Full Stack Passionné
+              Développeur Passionné !
             </p>
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
               <motion.a

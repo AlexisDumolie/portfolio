@@ -12,7 +12,7 @@ const About = () => {
           className="text-center mb-12"
         >
           <h2 className="text-3xl font-bold text-text sm:text-4xl mb-4">
-            À Propos de Moi
+            Développeur passionné en quête de nouveaux défis technologiques
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
         </motion.div>
@@ -26,16 +26,46 @@ const About = () => {
             className="space-y-6"
           >
             <h3 className="text-2xl font-semibold text-text">
-              Développeur Passionné
+              Bonjour !
             </h3>
             <p className="text-accent leading-relaxed">
-              Titulaire d'un Baccalauréat avec mention Très Bien, spécialisé en NSI (Numérique et Sciences Informatiques), 
-              Mathématiques et SVT, je suis passionné par le développement web et la création d'applications.
+              Je m'appelle Alexis Dumolié, étudiant en BUT Informatique à l'IUT de Bayonne et du Pays Basque. 
+              Depuis mes débuts en NSI au lycée, je me suis plongé avec enthousiasme dans l'univers du développement logiciel, 
+              de la programmation web et de la gestion de projets.
             </p>
             <p className="text-accent leading-relaxed">
-              Mon expérience inclut un stage enrichissant à la DOSIN (Département Informatique du Conseil Départemental du GERS), 
-              où j'ai pu mettre en pratique mes connaissances et développer de nouvelles compétences dans un environnement professionnel.
+              Mon parcours en informatique m'a permis d'acquérir des compétences solides en développement web (HTML/CSS, JavaScript), 
+              en programmation système (C++, Python) et en gestion de projet. J'ai également eu l'opportunité de mettre en pratique 
+              mes connaissances lors d'un stage au Conseil Départemental du Gers, où j'ai développé un module pour une application 
+              existante (SOLIS), renforçant ainsi mes compétences en bases de données et PHP.
             </p>
+            <div className="space-y-6">
+              <div>
+                <h4 className="text-xl font-semibold text-text mb-2">Mes objectifs</h4>
+                <p className="text-accent leading-relaxed">
+                  Je suis actuellement à la recherche d'un stage pour finaliser ma formation et me préparer à intégrer une école 
+                  d'ingénieur dans des domaines comme la cybersécurité, l'intelligence artificielle ou les jeux vidéo. Mon ambition 
+                  est de travailler sur des projets innovants qui combinent performance technique et impact positif.
+                </p>
+              </div>
+              <div>
+                <h4 className="text-xl font-semibold text-text mb-2">Mes valeurs</h4>
+                <ul className="list-disc list-inside text-accent space-y-2">
+                  <li><span className="font-semibold">Autonomie :</span> J'aime prendre des initiatives et chercher des solutions de manière proactive.</li>
+                  <li><span className="font-semibold">Polyvalence :</span> Je m'adapte facilement aux nouveaux outils et technologies.</li>
+                  <li><span className="font-semibold">Rigueur :</span> Je suis soucieux de produire un travail de qualité et de respecter les délais.</li>
+                  <li><span className="font-semibold">Esprit d'équipe :</span> Extraverti, je favorise la collaboration et la bonne communication dans les projets.</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-xl font-semibold text-text mb-2">Ce qui me passionne</h4>
+                <p className="text-accent leading-relaxed">
+                  En dehors de mes projets académiques, je développe actuellement un logiciel, Ecofloc, pour mesurer la consommation 
+                  énergétique des processus sur CPU, GPU et autres composants. J'aime relever ce type de défis, car ils combinent 
+                  programmation, optimisation et conscience écologique.
+                </p>
+              </div>
+            </div>
             <div className="flex flex-wrap gap-4">
               <motion.div
                 whileHover={{ scale: 1.05 }}
@@ -47,13 +77,13 @@ const About = () => {
                 whileHover={{ scale: 1.05 }}
                 className="px-4 py-2 bg-primary-light text-primary rounded-full"
               >
-                Applications
+                Programmation Système
               </motion.div>
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 className="px-4 py-2 bg-primary-light text-primary rounded-full"
               >
-                Full Stack
+                Gestion de Projet
               </motion.div>
             </div>
           </motion.div>
