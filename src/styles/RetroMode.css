@@ -1,0 +1,76 @@
+.retro {
+    background-color: #000 !important;
+    color: #00ff00 !important;
+    font-family: 'VT323', 'Courier New', monospace !important;
+    text-shadow: 0 0 5px #00ff00 !important;
+}
+
+.retro * {
+    background-color: #000 !important;
+    color: #00ff00 !important;
+    font-family: 'VT323', 'Courier New', monospace !important;
+    border-color: #00ff00 !important;
+}
+
+.retro img {
+    filter: sepia(100%) hue-rotate(70deg) brightness(70%) !important;
+}
+
+.retro a {
+    color: #00ff00 !important;
+    text-decoration: none !important;
+}
+
+.retro a:hover {
+    color: #fff !important;
+    text-shadow: 0 0 10px #00ff00 !important;
+}
+
+.retro button {
+    border: 2px solid #00ff00 !important;
+    background: transparent !important;
+    padding: 5px 15px !important;
+    cursor: pointer !important;
+}
+
+.retro button:hover {
+    background: #00ff00 !important;
+    color: #000 !important;
+}
+
+.retro input, .retro textarea {
+    background: #000 !important;
+    border: 2px solid #00ff00 !important;
+    color: #00ff00 !important;
+    padding: 5px !important;
+}
+
+.retro input:focus, .retro textarea:focus {
+    outline: none !important;
+    box-shadow: 0 0 5px #00ff00 !important;
+}
+
+@keyframes scanline {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+.retro::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        transparent 50%,
+        rgba(0, 255, 0, 0.05) 50%
+    );
+    background-size: 100% 4px;
+    pointer-events: none;
+    z-index: 9999;
+}

@@ -4,10 +4,14 @@ import About from './components/About'
 import Projects from './components/Projects'
 import Skills from './components/Skills'
 import Contact from './components/Contact'
+import useKonamiCode from './hooks/useKonamiCode'
+import './styles/RetroMode.css'
 
 function App() {
+  const isRetroMode = useKonamiCode();
+
   return (
-    <div className="min-h-screen w-full flex flex-col items-center bg-background">
+    <div className={`min-h-screen w-full flex flex-col items-center bg-background ${isRetroMode ? 'retro' : ''}`}>
       <Navbar />
       <main className="w-full flex-grow">
         <Hero />
