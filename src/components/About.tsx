@@ -29,40 +29,40 @@ const About = () => {
               Bonjour !
             </h3>
             <p className="text-accent leading-relaxed">
-              Je m'appelle Alexis Dumolié, étudiant en BUT Informatique à l'IUT de Bayonne et du Pays Basque. 
-              Depuis mes débuts en NSI au lycée, je me suis plongé avec enthousiasme dans l'univers du développement logiciel, 
-              de la programmation web et de la gestion de projets.
+              Je m'appelle Alexis Dumolié, étudiant en BUT Informatique à <span className="important-text">l'IUT de Bayonne et du Pays Basque</span>. 
+              Depuis mes débuts en <span className="important-text">NSI</span> au lycée, je me suis plongé avec enthousiasme dans l'univers du <span className="important-text">développement logiciel</span>, 
+              de la <span className="important-text">programmation web</span> et de la <span className="important-text">gestion de projets</span>.
             </p>
             <p className="text-accent leading-relaxed">
-              Mon parcours en informatique m'a permis d'acquérir des compétences solides en développement web (HTML/CSS, JavaScript), 
-              en programmation système (C++, Python) et en gestion de projet. J'ai également eu l'opportunité de mettre en pratique 
-              mes connaissances lors d'un stage au Conseil Départemental du Gers, où j'ai développé un module pour une application 
-              existante (SOLIS), renforçant ainsi mes compétences en bases de données et PHP.
+              Mon parcours en informatique m'a permis d'acquérir des compétences solides en développement web (<span className="important-text">HTML/CSS</span>), 
+              en programmation (<span className="important-text">C++, Python, Java</span>) et en gestion de projet. J'ai également eu l'opportunité de mettre en pratique 
+              mes connaissances lors d'un stage au Conseil Départemental du Gers, où j'ai développementé un module pour une application 
+              existante (SOLIS), renforçant ainsi mes compétences en bases de données et <span className="important-text">PHP</span>.
             </p>
             <div className="space-y-6">
               <div>
                 <h4 className="text-xl font-semibold text-text mb-2">Mes objectifs</h4>
                 <p className="text-accent leading-relaxed">
-                  Je suis actuellement à la recherche d'un stage pour finaliser ma formation et me préparer à intégrer une école 
-                  d'ingénieur dans des domaines comme la cybersécurité, l'intelligence artificielle ou les jeux vidéo. Mon ambition 
+                  Je suis actuellement à la recherche d'un stage pour finaliser ma formation et me préparer à intégrer une <span className="important-text">école 
+                  d'ingénieur</span> dans des domaines comme la <span className="important-text">cybersécurité</span>, <span className="important-text">l'intelligence artificielle</span> ou <span className="important-text">les jeux vidéo</span>. Mon ambition 
                   est de travailler sur des projets innovants qui combinent performance technique et impact positif.
                 </p>
               </div>
               <div>
                 <h4 className="text-xl font-semibold text-text mb-2">Mes valeurs</h4>
                 <ul className="list-disc list-inside text-accent space-y-2">
-                  <li><span className="font-semibold">Autonomie :</span> J'aime prendre des initiatives et chercher des solutions de manière proactive.</li>
-                  <li><span className="font-semibold">Polyvalence :</span> Je m'adapte facilement aux nouveaux outils et technologies.</li>
-                  <li><span className="font-semibold">Rigueur :</span> Je suis soucieux de produire un travail de qualité et de respecter les délais.</li>
-                  <li><span className="font-semibold">Esprit d'équipe :</span> Extraverti, je favorise la collaboration et la bonne communication dans les projets.</li>
+                  <li><span className="important-text">Autonomie :</span> J'aime prendre des initiatives et chercher des solutions de manière proactive.</li>
+                  <li><span className="important-text">Polyvalence :</span> Je m'adapte facilement aux nouveaux outils et technologies.</li>
+                  <li><span className="important-text">Rigueur :</span> Je suis soucieux de produire un travail de qualité et de respecter les délais.</li>
+                  <li><span className="important-text">Esprit d'équipe :</span> Extraverti, je favorise la collaboration et la bonne communication dans les projets.</li>
                 </ul>
               </div>
               <div>
                 <h4 className="text-xl font-semibold text-text mb-2">Ce qui me passionne</h4>
                 <p className="text-accent leading-relaxed">
-                  En dehors de mes projets académiques, je développe actuellement un logiciel, Ecofloc, pour mesurer la consommation 
+                  En dehors de mes projets académiques, je développe actuellement un logiciel, <span className="important-text">Ecofloc4Win</span>, pour mesurer la consommation 
                   énergétique des processus sur CPU, GPU et autres composants. J'aime relever ce type de défis, car ils combinent 
-                  programmation, optimisation et conscience écologique.
+                  programmation, optimisation et conscience écolo
                 </p>
               </div>
             </div>

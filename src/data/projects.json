@@ -3,14 +3,14 @@
     {
       "title": "CodeQuest",
       "description": "Application innovante dédiée à l'apprentissage du code. Une approche interactive et engageante pour maîtriser la programmation.",
-      "image": "/src/assets/projects/codequest.png",
-      "technologies": ["React", "TypeScript", "Node.js"],
+      "image": "/src/assets/projects/CodeQuest.png",
+      "technologies": ["HTML", "CSS", "JavaScript"],
       "githubLink": "https://github.com/CodeQuestApp/main"
     },
     {
-      "title": "ecoFloc4Win",
+      "title": "EcoFloc4Win",
       "description": "Fork du projet ecoFloc adapté pour Windows. Une solution écologique optimisée pour l'environnement Windows.",
-      "image": "/src/assets/projects/ecofloc4win.png",
+      "image": "/src/assets/projects/EcoFloc4Win.png",
       "technologies": ["C++", "Windows API"],
       "githubLink": "https://github.com/Mattis40/ecofloc4win"
     },

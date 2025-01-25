@@ -15,7 +15,7 @@
       "category": "Back-end",
       "items": [
         { "name": "PHP", "icon": "SiPhp" },
-        { "name": "Java", "icon": "SiJava" },
+        { "name": "Java", "icon": "DiJava" },
         { "name": "Symfony", "icon": "SiSymfony" },
         { "name": "Laravel", "icon": "SiLaravel" }
       ]
