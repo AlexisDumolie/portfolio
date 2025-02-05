@@ -1,7 +1,7 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-@import './styles/colors.css';
+@import './styles/theme.css';
 
 @layer base {
   html {
@@ -13,9 +13,27 @@
     padding: 0;
     min-width: 100vw;
     min-height: 100vh;
-    background-color: var(--color-background);
     color: var(--color-text);
+    background-color: var(--color-background);
     overflow-x: hidden;
+  }
+
+  /* Styles pour le mode normal uniquement */
+  body:not(.retro) {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-normal);
+  }
+
+  body:not(.retro) h1,
+  body:not(.retro) h2,
+  body:not(.retro) h3,
+  body:not(.retro) h4,
+  body:not(.retro) h5,
+  body:not(.retro) h6 {
+    font-family: var(--font-secondary);
+    line-height: var(--line-height-tight);
+    font-weight: var(--font-weight-bold);
   }
 }
 
@@ -23,8 +41,6 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -33,11 +49,12 @@
 
 a {
   font-weight: 500;
-  color: var(--color-background);
+  color: var(--color-primary);
   text-decoration: inherit;
+  transition: color 0.3s ease;
 }
 a:hover {
-  color: var(--color-background);
+  color: var(--color-accent);
 }
 
 .contact-link {
@@ -50,42 +67,75 @@ a:hover {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  color: var(--color-primary);
 }
 
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
+  border: 1px solid var(--color-border);
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--color-button);
+  color: var(--color-button-text);
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: all 0.25s ease;
 }
 button:hover {
-  border-color: var(--color-primary);
+  background-color: var(--color-button-hover);
+  border-color: var(--color-button-hover);
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }
 
 @layer components {
   .container-section {
     @apply w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8;
   }
+
+  /* Cards */
+  .card {
+    @apply rounded-lg shadow-md p-6 transition-all duration-300;
+    background-color: var(--color-card);
+    border: 1px solid var(--color-border);
+    box-shadow: 0 4px 6px var(--color-shadow);
+  }
+  
+  .card:hover {
+    background-color: var(--color-card-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 12px var(--color-shadow);
+  }
+
+  /* Form inputs */
+  .input {
+    @apply w-full px-4 py-2 rounded-lg transition-all duration-300;
+    background-color: var(--color-input);
+    border: 1px solid var(--color-input-border);
+  }
+  
+  .input:focus {
+    background-color: var(--color-input-focus);
+    border-color: var(--color-input-border-focus);
+    outline: none;
+  }
 }
 
 /* Styles personnalisés pour les boutons */
 .btn-primary {
-  background-color: var(--color-primary);
-  color: var(--color-background);
-  transition: background-color 0.3s ease;
+  background-color: var(--color-button);
+  color: var(--color-button-text);
+  transition: all 0.3s ease;
+  border: none;
 }
 
 .btn-primary:hover {
-  background-color: var(--color-primary-hover);
+  background-color: var(--color-button-hover);
+  transform: translateY(-1px);
 }
 
 /* Styles pour les sections */
@@ -95,19 +145,6 @@ button:focus-visible {
 
 .section-bg-secondary {
   background-color: var(--color-secondary);
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: var(--color-background);
-  }
-  button {
-    background-color: #f9f9f9;
-  }
 }
 
 .important-text {

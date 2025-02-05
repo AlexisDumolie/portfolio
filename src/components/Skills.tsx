@@ -45,27 +45,25 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="py-20 bg-background">
-      <div className="container-section">
-        {/* En-tête de la section avec animation */}
+    <section id="skills" className="py-24 bg-[var(--color-cream)] relative">
+      <div className="container-section relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-12"
+          className="text-center mb-20"
         >
-          <h2 className="text-3xl font-bold text-text sm:text-4xl mb-4">
+          <h2 className="text-4xl font-semibold text-[var(--color-text)] mb-4">
             Mes Compétences
           </h2>
-          <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
-          <p className="text-xl text-accent max-w-2xl mx-auto">
+          <div className="w-12 h-[1px] bg-[var(--color-coffee)] mx-auto mb-6 opacity-40"></div>
+          <p className="text-lg text-[var(--color-text-soft)] max-w-2xl mx-auto">
             Technologies et compétences que j'utilise au quotidien
           </p>
         </motion.div>
 
-        {/* Grille des compétences */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto px-4">
           {skills.map((skillCategory, categoryIndex) => (
             <motion.div
               key={categoryIndex}
@@ -73,13 +71,13 @@ const Skills = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
-              className="bg-background rounded-xl p-6"
+              className="bg-[var(--color-sand)] p-8 rounded-2xl group hover:shadow-sm transition-shadow duration-300"
             >
-              <h3 className="text-xl font-semibold text-text mb-4 border-b border-accent/20 pb-2">
+              <h3 className="text-lg font-medium text-[var(--color-text-soft)] mb-6 
+                           group-hover:text-[var(--color-coffee)] transition-colors duration-300">
                 {skillCategory.category}
               </h3>
-              {/* Liste des compétences avec leurs icônes */}
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-2.5">
                 {skillCategory.items.map((skill, skillIndex) => {
                   const IconComponent = getIcon(skill.icon);
                   return (
@@ -88,13 +86,15 @@ const Skills = () => {
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.4, delay: skillIndex * 0.1 }}
-                      whileHover={{ scale: 1.05 }}
-                      className="px-4 py-2 bg-primary/10 rounded-lg text-primary border border-primary/20 
-                               hover:bg-primary/20 transition-all duration-300 cursor-default
-                               flex items-center gap-2"
-                    >
-                      {IconComponent && <IconComponent className="text-lg" />}
-                      {skill.name}
+                      whileHover={{ scale: 1.02 }}
+                      className="px-4 py-2 bg-[var(--color-cream)] text-[var(--color-text)]
+                               rounded-full transition-all duration-300 flex items-center gap-2 text-sm shadow-sm">
+                      {IconComponent && (
+                        <IconComponent 
+                          className="text-base text-[var(--color-coffee)] opacity-80 transition-opacity" 
+                        />
+                      )}
+                      <span className="font-medium">{skill.name}</span>
                     </motion.div>
                   );
                 })}

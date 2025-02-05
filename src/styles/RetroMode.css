@@ -70,18 +70,22 @@
     text-shadow: 0 0 10px #00ff00 !important;
 }
 
-.retro button {
+.retro button,
+.retro .btn-primary {
     border: 2px solid #00ff00 !important;
     background: transparent !important;
     padding: 5px 15px !important;
     cursor: pointer !important;
     text-shadow: 0 0 5px #00ff00 !important;
+    color: #00ff00 !important;
 }
 
-.retro button:hover {
+.retro button:hover,
+.retro .btn-primary:hover {
     background: #00ff00 !important;
     color: #000 !important;
     text-shadow: none !important;
+    border-color: #00ff00 !important;
 }
 
 .retro input, .retro textarea {

@@ -12,18 +12,21 @@ function App() {
   const isRetroMode = useKonamiCode();
 
   return (
-    <div className={`min-h-screen w-full flex flex-col items-center bg-background ${isRetroMode ? 'retro' : ''}`}>
-      <Navbar />
-      <main className="w-full flex-grow">
-        <Hero />
-        <About />
-        <Projects />
-        <Skills />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
-  )
+    <div className={`relative min-h-screen w-full ${isRetroMode ? 'retro' : ''}`}>
+        {!isRetroMode}
+        <div className="relative z-10 bg-transparent">
+          <Navbar />
+          <main className="bg-transparent">
+            <Hero />
+            <About />
+            <Projects />
+            <Skills />
+            <Contact />
+          </main>
+          <Footer />
+        </div>
+      </div>
+  );
 }
 
 export default App

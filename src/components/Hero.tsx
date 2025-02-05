@@ -1,10 +1,13 @@
 import { motion } from 'framer-motion';
 import photoProfil from '../assets/projects/photoDeProfil.jpg';
+import useKonamiCode from '../hooks/useKonamiCode';
 
 const Hero = () => {
+  const isRetro = useKonamiCode();
+
   return (
-    <section className="min-h-screen flex items-center justify-center py-20 bg-background">
-      <div className="container-section">
+    <section className="min-h-screen flex items-center justify-center py-20 bg-transparent overflow-hidden relative">
+      <div className="container-section relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -12,10 +15,14 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
             className="text-center lg:text-left"
           >
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-text mb-6">
+            <h1 
+              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-text mb-6"
+            >
               Alexis Dumolie
             </h1>
-            <p className="text-xl sm:text-2xl text-accent mb-8">
+            <p 
+              className="text-xl sm:text-2xl text-accent mb-8"
+            >
               Développeur Passionné !
             </p>
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
@@ -23,15 +30,25 @@ const Hero = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 href="#projects"
-                className="btn-primary px-8 py-3 rounded-full text-lg font-medium"
+                className="bg-[var(--color-coffee)] text-white px-8 py-3 rounded-full text-lg font-medium
+                         transition-all duration-300 hover:bg-[var(--color-mocha)]"
               >
                 Voir mes projets
               </motion.a>
               <motion.a
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ 
+                  scale: 1.05, 
+                  backgroundColor: isRetro ? 'var(--color-primary)' : 'var(--color-coffee)',
+                  color: 'white'
+                }}
+                initial={false}
+                animate={{ 
+                  color: isRetro ? 'var(--color-primary)' : 'var(--color-coffee)',
+                  borderColor: isRetro ? 'var(--color-primary)' : 'var(--color-coffee)'
+                }}
                 whileTap={{ scale: 0.95 }}
                 href="#contact"
-                className="px-8 py-3 rounded-full text-lg font-medium border-2 border-primary text-primary hover:bg-primary hover:text-background transition-colors"
+                className="px-8 py-3 rounded-full text-lg font-medium transition-all duration-100 border-2"
               >
                 Me contacter
               </motion.a>
@@ -46,7 +63,7 @@ const Hero = () => {
             <img 
               src={photoProfil} 
               alt="Alexis Dumolie" 
-              className="w-full h-full object-cover rounded-full"
+              className="w-[80%] h-[80%] object-cover rounded-full"
             />
           </motion.div>
         </div>
