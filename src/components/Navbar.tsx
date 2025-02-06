@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import cvFile from '../assets/CV_Dumolie_Alexis.pdf';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +23,7 @@ const Navbar = () => {
             </a>
 
             {/* Menu Desktop */}
-            <div className="hidden md:flex space-x-8">
+            <div className="hidden md:flex space-x-8 items-center">
               {menuItems.map((item) => (
                 <a
                   key={item.text}
@@ -32,6 +33,14 @@ const Navbar = () => {
                   {item.text}
                 </a>
               ))}
+              <a
+                href={cvFile}
+                download="CV_Dumolie_Alexis.pdf"
+                className="bg-[var(--color-coffee)] text-white px-4 py-2 rounded-full text-sm font-medium
+                       transition-all duration-300 hover:bg-[var(--color-mocha)]"
+              >
+                Télécharger CV
+              </a>
             </div>
 
             {/* Bouton Menu Mobile */}
@@ -81,6 +90,15 @@ const Navbar = () => {
                     {item.text}
                   </a>
                 ))}
+                <a
+                  href={cvFile}
+                  download="CV_Dumolie_Alexis.pdf"
+                  className="bg-[var(--color-coffee)] text-white px-4 py-2 rounded-full text-sm font-medium text-center
+                         transition-all duration-300 hover:bg-[var(--color-mocha)]"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Télécharger CV
+                </a>
               </div>
             </div>
           </motion.div>
