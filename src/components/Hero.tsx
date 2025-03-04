@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import photoProfil from '../assets/projects/photoDeProfil.jpg';
+import photoProfilRetro from '../assets/projects/photoDeProfil-retro.jpg';
 import useKonamiCode from '../hooks/useKonamiCode';
 
 const Hero = () => {
@@ -61,9 +62,9 @@ const Hero = () => {
             className="hidden lg:block"
           >
             <img 
-              src={photoProfil} 
+              src={ isRetro ? photoProfilRetro : photoProfil} 
               alt="Alexis Dumolie" 
-              className="w-[80%] h-[80%] object-cover rounded-full"
+              className="w-[80%] h-[80%] object-cover rounded-full border-none profile-picture"
             />
           </motion.div>
         </div>

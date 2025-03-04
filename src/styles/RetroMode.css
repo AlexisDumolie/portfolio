@@ -118,7 +118,7 @@
     );
     pointer-events: none;
     z-index: 2;
-    animation: scanline .09s linear infinite;
+    animation: scanline .05s linear infinite;
     opacity: 0.7;
 }
 
@@ -131,4 +131,16 @@
     font-size: 0.8rem;
     opacity: 0.7;
     cursor: help;
+}
+
+
+.retro .project-div, .retro .skill-div{
+    border-color: #00ff00 !important;
+    border-style: solid !important;
+    border-width: 2px !important;
+
+}
+
+.retro .profile-picture {
+    filter: grayscale(1) blur(1px) contrast(1.2) sepia(1);
 }

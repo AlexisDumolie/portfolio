@@ -71,7 +71,7 @@ const Skills = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
-              className="bg-[var(--color-sand)] p-8 rounded-2xl group hover:shadow-sm transition-shadow duration-300"
+              className="bg-[var(--color-sand)] p-8 rounded-2xl group hover:shadow-sm transition-shadow duration-300 skill-div"
             >
               <h3 className="text-lg font-medium text-[var(--color-text-soft)] mb-6 
                            group-hover:text-[var(--color-coffee)] transition-colors duration-300">

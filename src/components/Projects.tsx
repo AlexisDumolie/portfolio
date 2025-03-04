@@ -52,7 +52,7 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              className="bg-[var(--color-sand)] rounded-2xl shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300"
+              className="bg-[var(--color-sand)] rounded-2xl shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300 project-div"
             >
               <a href={project.githubLink} target="_blank" className="hover:cursor">
                 <div className="relative group">
