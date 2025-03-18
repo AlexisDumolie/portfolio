@@ -103,7 +103,7 @@ const Contact = () => {
                     />
                   </svg>
                   <a
-                    href="mailto:alexis.dumolie@gmail.com"
+                    href="mailto:dumoliealexis@gmail.com"
                     className="contact-link"
                   >
                     dumoliealexis@gmail.com
@@ -111,7 +111,7 @@ const Contact = () => {
                 </div>
                 <div className="flex items-center space-x-4 text-[var(--color-accent)]">
                   <BsTelephone className="w-6 h-6 text-[var(--color-primary)]" />
-                  <a href="tel:+33781787978" className="contact-link">
+                  <a href="tel:+33767200756" className="contact-link">
                     07 67 20 07 56
                   </a>
                 </div>
