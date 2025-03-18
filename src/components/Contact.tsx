@@ -106,13 +106,13 @@ const Contact = () => {
                     href="mailto:alexis.dumolie@gmail.com"
                     className="contact-link"
                   >
-                    alexis.dumolie@gmail.com
+                    dumoliealexis@gmail.com
                   </a>
                 </div>
                 <div className="flex items-center space-x-4 text-[var(--color-accent)]">
                   <BsTelephone className="w-6 h-6 text-[var(--color-primary)]" />
                   <a href="tel:+33781787978" className="contact-link">
-                    07 81 78 79 78
+                    07 67 20 07 56
                   </a>
                 </div>
               </div>
